@@ -1,5 +1,5 @@
 (defproject writersgame "0.1.0-SNAPSHOT"
-  :description "Simple drag’n’drop game"
+  :description "Simple game written to have little fun with drag’n’drop"
   :url "https://github.com/jonki/writersgame"
 
   :dependencies [[org.clojure/clojure "1.5.1"]
