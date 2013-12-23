@@ -23,4 +23,5 @@
               :source-paths ["src"]
               :compiler {
                 :output-to "script.js"
-                :optimizations :advanced}}]})
+                :optimizations :advanced
+                :pretty-print false}}]})
