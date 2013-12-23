@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Writers game</title>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      * {
+          -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+          -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+          box-sizing: border-box;    
+      }
+      body {
+        background: #eee;
+        color: #333;
+        font-family: "Alegreya";
+        margin: 0;
+      }
+      .writers-game, .writers-data {
+        height: 768px;
+        overflow: auto;
+        padding: 4rem 2rem 2.6rem 6rem;
+        width: 1024px;
+      }
+      .writers-data {
+        padding-top: .8rem;
+      }
+      .books {
+        margin-left: 4rem;
+      }
+      .moving, .moving * {
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        /* No support for these yet, use at own risk */
+        -o-user-select: none;
+        user-select: none;
+        cursor: move;          
+      }
+      h1 {
+        font-size: 1.6rem;
+        margin: 0;
+      }
+      h2 {
+        margin: 0;
+      }
+      li h1, li h2 {
+        font-weight: 400
+      }
+      .writers-list, .books-list {
+        display: inline-block;
+        list-style-type: none;
+        vertical-align: top;
+      }
+      .books, .writers {
+        display: inline-block;
+      }
+      ul, li {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        line-height: 2;
+      }
+      .writers-game .book {
+        cursor: move;
+      }
+      .writers {
+        width: 200px;
+      }
+      .books {
+        width: 400px;
+      }
+      .book {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+      .writers-list li h2:before {
+        /*content: "– ";*/
+      }
+      .writers-list li {
+        position: relative;
+        z-index: 4;
+      }
+      .score h1 {
+        font-style: italic;
+      }
+      .score {
+        font-size: 1.3rem;
+        margin-top: 1.6rem;
+      }
+      .score span, .score h1 {
+        display: inline-block;
+        font-size: 1.3rem;
+      }
+      .done {
+        color:green;
+      }
+      .left {
+        color: red;
+      }
+      .disable {
+        display: none;
+      }
+      .writers-data .surname {
+        margin-bottom: -.6rem;
+        margin-top: .6rem;
+      }
+      .writers-data .book {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="writers-game enable">
+      <article class="writers">
+        <h1>Writers</h1>
+        <ul class="writers-list"></ul>
+      </article>
+      <article class="books">
+        <h1>Books</h1>
+        <ul class="books-list"></ul>
+      </article>
+      <article class="score">
+        <h1>Wynik: </h1>
+        <span class="done">1</span> /
+        <span class="left">12</span>
+      </article>
+    </section>
+        <script src="script.js" type="text/javascript"></script>
+        <!--<script src="out/goog/base.js" type="text/javascript"></script>
+        <script src="writersgame.js" type="text/javascript"></script>
+        <script type="text/javascript">goog.require("writersgame.core");</script>-->
+    </body>
+</html>
